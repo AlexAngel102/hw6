@@ -34,4 +34,6 @@ vendor/laravel/homestead/src/
 vendor/laravel/homestead/tests/
 vendor/psr/
 vendor/symfony/
-.idea
+.idea/
+.idea/hw6.loc.iml
+.idea/php.xml
