@@ -1,36 +1,34 @@
 <?php
 
-
 namespace App;
-
 
 use App\Interfaces\ArrayHandlerInterface;
 
 class IntegratedArrayHandle implements ArrayHandlerInterface
 {
 
-    public function arrayCount()
+    public function arrayCount(array $array): int
     {
-        // TODO: Implement arrayCount() method.
+        return count($array);
     }
 
-    public function inArray()
+    public function inArray($needle, array $array): bool
     {
-        // TODO: Implement inArray() method.
+        return in_array($needle, $array);
     }
 
-    public function keysArray()
+    public function keysArray(array $array): array
     {
-        // TODO: Implement keysArray() method.
+        return array_keys($array);
     }
 
-    public function keyExist()
+    public function keyExist($key, array $array): bool
     {
-        // TODO: Implement keyExist() method.
+        return array_key_exists($key, $array);
     }
 
-    public function firstKey()
+    public function arrayValues(array $array): array
     {
-        // TODO: Implement firstKey() method.
+        return array_values($array);
     }
 }

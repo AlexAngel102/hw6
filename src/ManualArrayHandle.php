@@ -1,36 +1,60 @@
 <?php
 
-
 namespace App;
-
 
 use App\Interfaces\ArrayHandlerInterface;
 
 class ManualArrayHandle implements ArrayHandlerInterface
 {
-
-    public function arrayCount()
+    public function arrayCount(array $array): int
     {
-        // TODO: Implement arrayCount() method.
+        $i = 0;
+        foreach ($array as $value) {
+            $i++;
+        }
+        return $i;
     }
 
-    public function inArray()
+    public function inArray($needle, array $array): bool
     {
-        // TODO: Implement inArray() method.
+        foreach ($array as $item) {
+            if ($item == $needle) {
+                $result = true;
+                break;
+            } else {
+                $result = false;
+            }
+        }
+        return $result;
     }
 
-    public function keysArray()
+    public function keysArray(array $array): array
     {
-        // TODO: Implement keysArray() method.
+        foreach ($array as $key => $value){
+            $keys[] = $key;
+        }
+        return $keys;
     }
 
-    public function keyExist()
+    public function keyExist($index, array $array): bool
     {
-        // TODO: Implement keyExist() method.
+        foreach ($array as $key => $value){
+            if ($key == $index){
+                $result = true;
+                break;
+            }else{
+                $result = false;
+            }
+        }
+        return $result;
     }
 
-    public function firstKey()
+    public function arrayValues(array $array): array
     {
-        // TODO: Implement firstKey() method.
+        foreach ($array as $value){
+            $values[] = $value;
+        }
+        return $values;
     }
+
 }
