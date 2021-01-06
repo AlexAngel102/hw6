@@ -6,12 +6,12 @@ namespace App;
 
 class UserTemplateResponse
 {
-    public function __invoke(User $user)
+    public function __invoke(User $user): void
     {
         $this->getUserView($user);
     }
 
-    protected function getUserView(User $user): void
+    private function getUserView(User $user): void
     {
         $template = '
                     <!doctype html>
@@ -56,5 +56,4 @@ class UserTemplateResponse
                     ';
         echo sprintf($template, $user->getName(), $user->getEmail(), $user->getPassword(), $user->getAdress());
     }
-}
 }

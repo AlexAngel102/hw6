@@ -4,13 +4,13 @@ namespace App;
 
 class UserJsoneResponse
 {
-    public function __invoke(User $user)
+    public function __invoke(User $user): string
     {
         $this->getUserView($user);
     }
 
-    protected function getUserView(User $user):string
+    protected function getUserView(User $user): string
     {
-        return json_encode($user);
+        echo json_encode($user);
     }
 }
