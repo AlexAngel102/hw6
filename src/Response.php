@@ -4,7 +4,7 @@ namespace App;
 
 class Response
 {
-    public static function get()
+    public function get(Response $response): string
     {
 
     }

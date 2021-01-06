@@ -3,6 +3,8 @@
 use App\IntegratedArrayHandle;
 use App\ManualArrayHandle;
 use App\Router;
+use App\User;
+use App\UserTemplateResponse;
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -24,16 +26,16 @@ $autoloader->register();
 //echo '<br>';
 
 $someArray = [
-    'fruit1'=>'Apple',
-    'fruit2'=>'Banana',
-    'alcohol1'=>'Beer',
-    'fruit3'=>'Pineapple',
-    'alcohol2'=>'Vodka',
-    'alcohol3'=>'Cognak',
-    'alcohol4'=>'Rum',
-    'alcohol5'=>'Tequila',
-    'fruit4'=>'Orange',
-    'fruit5'=>'Mandorin'
+    'fruit1' => 'Apple',
+    'fruit2' => 'Banana',
+    'alcohol1' => 'Beer',
+    'fruit3' => 'Pineapple',
+    'alcohol2' => 'Vodka',
+    'alcohol3' => 'Cognak',
+    'alcohol4' => 'Rum',
+    'alcohol5' => 'Tequila',
+    'fruit4' => 'Orange',
+    'fruit5' => 'Mandorin'
 ];
 
 //$integratedArrayFunctions = new IntegratedArrayHandle();
@@ -68,3 +70,6 @@ $someArray = [
 //echo '<br>';
 //print_r($manualArrayFunctions->arrayValues($someArray));
 
+$user = new User('Aleksand', 'alex@gmail.com', 'Qwerty12345', 'Ukrain, Odessa');
+$userTemplateResponse = new userTemplateResponse();
+$userTemplateResponse($user);
