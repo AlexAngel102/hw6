@@ -2,10 +2,12 @@
 
 namespace App;
 
+use App\Interfaces\UserResponse;
+
 class Response
 {
-    public function get(Response $response): string
+    public function get(UserResponse $response): void
     {
-
+        echo $response->getUserView();
     }
 }

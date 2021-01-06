@@ -2,7 +2,6 @@
 
 namespace App;
 
-use http\Exception\InvalidArgumentException;
 use http\Exception\UnexpectedValueException;
 
 class User
